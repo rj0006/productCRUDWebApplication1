@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProductDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblProduct">
+    <Key>
+      <PropertyRef Name="prod_id" />
+    </Key>
+    <Property Name="prod_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="prod_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="prod_price" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="prod_qty" Type="Int32" Nullable="false" />
+    <Property Name="prod_pic" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="ProductDBEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblProducts" EntityType="Self.tblProduct" />
+    <EntitySet Name="States" EntityType="ProductDBModel.State" />
+    <EntitySet Name="ewayBills" EntityType="ProductDBModel.ewayBill" />
+    <EntitySet Name="Users" EntityType="ProductDBModel.User" />
+  </EntityContainer>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="state_name" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="state_code" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="state_country" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ewayBill">
+    <Key>
+      <PropertyRef Name="GSTIN" />
+    </Key>
+    <Property Name="GSTIN" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="State" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="EWBUserName" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="EWBPassword" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Year" Type="Int32" />
+    <Property Name="Month" Type="Int32" />
+    <Property Name="EFUserName" Type="String" MaxLength="255" FixedLength="true" Unicode="true" />
+    <Property Name="EFPassword" Type="String" MaxLength="255" FixedLength="true" Unicode="true" />
+    <Property Name="CDKey" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

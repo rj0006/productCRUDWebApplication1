@@ -1,0 +1,50 @@
+﻿@model List<ProductCRUDWebApplication1.Models.State>
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h2>List of all State</h2>
+<div class="row">
+    <div class="col-6">
+        <div>
+            <a href="@Url.Action("Create", "State")" class="btn btn-sm btn-primary">Add New State</a>
+        </div>
+    </div>
+</div>
+
+<table class="table table-bordered table-striped" id="tblData">
+    <thead>
+        <tr>
+            <th>State ID</th>
+            <th>Name</th>
+            <th>GST Code</th>
+            <th>Country</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.state_name</td>
+                <td>@item.state_code</td>
+                <td>@item.state_country</td>
+                <td>
+                    <a href="@Url.Action("Edit", "State", new { @id = item.Id })" class="btn btn-sm btn-warning">Edit</a>
+                    <a href="@Url.Action("Delete", "State", new { @id = item.Id })" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure want to delete @item.state_name ?')">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section scripts{
+    <script src="~/Content/js/CustomJS.js"></script>
+}
+
+<script>
+    console.log($)
+</script>
+

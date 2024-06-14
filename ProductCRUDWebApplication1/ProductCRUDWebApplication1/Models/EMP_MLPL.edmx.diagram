@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b971f3109d2d44e69f7eb7303915bdc1" Name="Diagram1">
+        <EntityTypeShape EntityType="MLPLModel.AC_Master_VendorContract_LoadingUnloading" Width="1.5" PointX="10.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Adjustment_Header" Width="1.5" PointX="3" PointY="270" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Advice" Width="1.5" PointX="6" PointY="268.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Advice_Acknowledgement_Detail" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Asn_Detail" Width="1.5" PointX="12.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Cheque_Detail" Width="1.5" PointX="9" PointY="267.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Consignor_Consignee_Mapping" Width="1.5" PointX="22.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_CreditDebit_Header" Width="1.5" PointX="22.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.Cl_CreditDebitNote_Header" Width="1.5" PointX="12.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_CustomerBill_Detail" Width="1.5" PointX="17.25" PointY="272.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_CustomerBill_Header" Width="1.5" PointX="12" PointY="263" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_CustomerBill_Header_Log" Width="1.5" PointX="24.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_CustomerBill_Submission_Header" Width="1.5" PointX="24.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_CustomerBill_Supplementry_Detail" Width="1.5" PointX="19.25" PointY="264.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_CustomerBill_Tripsheet_Detail" Width="1.5" PointX="14.25" PointY="275.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_DCR" Width="1.5" PointX="16.5" PointY="221.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_DCR_Management_History" Width="1.5" PointX="18.75" PointY="222.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Deps_Detail" Width="1.5" PointX="43.25" PointY="263.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Deps_History" Width="1.5" PointX="45.5" PointY="263.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket" Width="1.5" PointX="32.75" PointY="259.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_BookingChallan" Width="1.5" PointX="18.75" PointY="318.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_BookingChallan_Detail" Width="1.5" PointX="21" PointY="319.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_ChangeStatus_Trn" Width="1.5" PointX="12.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_Charge" Width="1.5" PointX="35" PointY="344.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_Charge_Detail" Width="1.5" PointX="35" PointY="249" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_DACC" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_Detail" Width="1.5" PointX="35" PointY="293.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_Dispatch_Header" Width="1.5" PointX="38.75" PointY="267.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_Document" Width="1.5" PointX="35" PointY="273.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_History" Width="1.5" PointX="0.75" PointY="27.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_HoldUnhold" Width="1.5" PointX="24.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_Invoice" Width="1.5" PointX="35" PointY="311.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_Invoice_Part" Width="1.5" PointX="5.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_Status" Width="1.5" PointX="43.25" PointY="259.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_Status_Trn" Width="1.5" PointX="7.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_Summary" Width="1.5" PointX="41" PointY="259.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_Talk" Width="1.5" PointX="26.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_Tax_Detail" Width="1.5" PointX="35" PointY="276.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_Tpl_Charge_Detail" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_Tpl_Tax_Detail" Width="1.5" PointX="26.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Document_Nomenclature" Width="1.5" PointX="26.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Document_Void" Width="1.5" PointX="18.75" PointY="224.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Drs_Charge_Detail" Width="1.5" PointX="26.75" PointY="251" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Drs_Header" Width="1.5" PointX="24.5" PointY="256.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Drs_Header_History" Width="1.5" PointX="17.75" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Error" Width="1.5" PointX="26.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_EWayBill_Detail" Width="1.5" PointX="26.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Flight_Days" Width="1.5" PointX="15.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Flight_Schedule_Detail" Width="1.5" PointX="15.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Flight_Schedule_Header" Width="1.5" PointX="13" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Gatepass_Header" Width="1.5" PointX="27.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Grn_Detail" Width="1.5" PointX="28.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Inspection_Detail" Width="1.5" PointX="13" PointY="24.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Inspection_Header" Width="1.5" PointX="10.75" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_JobOrder_Header" Width="1.5" PointX="27.5" PointY="260.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_JobOrder_SparePart_Detail" Width="1.5" PointX="35.75" PointY="268.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_JobOrder_Task_Detail" Width="1.5" PointX="7.5" PointY="286.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_LoadingSheet_Detail" Width="1.5" PointX="46.25" PointY="259.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_LoadingSheet_Header" Width="1.5" PointX="16.5" PointY="253.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Manifest_Detail" Width="1.5" PointX="43.25" PointY="270.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Manifest_Header" Width="1.5" PointX="16.5" PointY="276.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_ManifestLabourDC_Header" Width="1.5" PointX="9.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Account" Width="1.5" PointX="3" PointY="261.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_AccountCategory" Width="1.5" PointX="0.75" PointY="260.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_AccountGroup" Width="1.5" PointX="0.75" PointY="255.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_AccountOpening" Width="1.5" PointX="8.25" PointY="263.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_AccountOpening_Party" Width="1.5" PointX="8.25" PointY="259" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Address" Width="1.5" PointX="15" PointY="216.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Airport" Width="1.5" PointX="10.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Application_Setting" Width="1.5" PointX="28.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Asset" Width="1.5" PointX="3" PointY="255.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_BillFormat" Width="1.5" PointX="15" PointY="233" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Bin" Width="1.5" PointX="21" PointY="293.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Bin_Hierarchy" Width="1.5" PointX="21" PointY="290" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Budget" Width="1.5" PointX="11.25" PointY="258.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Card" Width="1.5" PointX="5.25" PointY="256.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Card_Detail" Width="1.5" PointX="7.5" PointY="249.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Charge" Width="1.5" PointX="5.25" PointY="277.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_City" Width="1.5" PointX="35.75" PointY="357.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_CodeType" Width="1.5" PointX="22.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Company" Width="1.5" PointX="0.75" PointY="268.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Country" Width="1.5" PointX="28.25" PointY="355.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Customer" Width="1.5" PointX="12" PointY="244.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Customer_Address_Mapping" Width="1.5" PointX="17.25" PointY="245.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Customer_AddressInfo" Width="1.5" PointX="14.25" PointY="244.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Customer_Detail" Width="1.5" PointX="14.25" PointY="236.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Customer_Paybas_Mapping" Width="1.5" PointX="14.25" PointY="247.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_CustomerBillFormat" Width="1.5" PointX="17.25" PointY="241.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_CustomerContract" Width="1.5" PointX="32.75" PointY="344.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_CustomerContract_BasicInfo" Width="1.5" PointX="19.5" PointY="272.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_CustomerContract_BillingInfo" Width="1.5" PointX="27.5" PointY="254.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_CustomerContract_DefineChargeMatrix" Width="1.5" PointX="35" PointY="318" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_CustomerContract_FleetCharge" Width="1.5" PointX="35" PointY="323.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_CustomerContract_Invoke" Width="1.5" PointX="11.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_CustomerContract_ModewiseServices" Width="1.5" PointX="35" PointY="332.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_CustomerContract_ODA_Distance" Width="1.5" PointX="35" PointY="329.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_CustomerContract_ODA_Matrix" Width="1.5" PointX="35" PointY="340.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_CustomerContract_ODA_Slab" Width="1.5" PointX="35" PointY="363.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_CustomerContract_RateMatrix" Width="1.5" PointX="35" PointY="365.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_CustomerContract_RateMatrix_SlabRange" Width="1.5" PointX="35" PointY="370.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_CustomerContract_RateMatrix_SlabRate" Width="1.5" PointX="35" PointY="373.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_CustomerContract_RiskMatrix" Width="1.5" PointX="35" PointY="379.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_CustomerContract_ServiceAccess" Width="1.5" PointX="35" PointY="383" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_CustomerContract_Services" Width="1.5" PointX="35" PointY="385.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_CustomerGroup" Width="1.5" PointX="9.75" PointY="246" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Document_Control" Width="1.5" PointX="28.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Driver" Width="1.5" PointX="27.5" PointY="270.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Driver_Document" Width="1.5" PointX="29.75" PointY="279" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Fields" Width="1.5" PointX="13.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_FinancialYearRight" Width="1.5" PointX="28.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_FSCRate" Width="1.5" PointX="3" PointY="274.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Fuel_Brand" Width="1.5" PointX="6" PointY="245.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Fuel_Card" Width="1.5" PointX="8.25" PointY="253.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_FuelSurchargeRevision" Width="1.5" PointX="28.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_General" Width="1.5" PointX="25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_General_Rule_Values" Width="1.5" PointX="28.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Gst" Width="1.5" PointX="32.75" PointY="354.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Holiday_Datewise" Width="1.5" PointX="12" PointY="282" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Holiday_Weekday" Width="1.5" PointX="29.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_HSN" Width="1.5" PointX="22.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Issue" Width="1.5" PointX="28.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Issue_History" Width="1.5" PointX="5.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_JobOrder_Task" Width="1.5" PointX="10.5" PointY="287" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_JobOrder_TaskType" Width="1.5" PointX="5.25" PointY="287.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_JobOrder_WorkGroup" Width="1.5" PointX="8.25" PointY="283.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Labour" Width="1.5" PointX="30.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Lane" Width="1.5" PointX="6" PointY="262.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Location" Width="1.5" PointX="14.25" PointY="255.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Location_Hierarchy" Width="1.5" PointX="30.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Menu" Width="1.5" PointX="31.25" PointY="242.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Menu_Access" Width="1.5" PointX="30.5" PointY="246.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_PackagingMeasurement" Width="1.5" PointX="30.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Pincode" Width="1.5" PointX="16.5" PointY="291.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Product" Width="1.5" PointX="10.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Product_Customer_Mapping" Width="1.5" PointX="14.25" PointY="127.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_ProductTemperature" Width="1.5" PointX="30.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Receiver" Width="1.5" PointX="16.5" PointY="295.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Report_ColumnList" Width="1.5" PointX="30.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Role" Width="1.5" PointX="28.25" PointY="246.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_RoleBasedMenu_Access" Width="1.5" PointX="33.5" PointY="245.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Route" Width="1.5" PointX="16.5" PointY="299.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Route_CityWise" Width="1.5" PointX="36.5" PointY="237.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Route_Detail" Width="1.5" PointX="21.75" PointY="281.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Rules" Width="1.5" PointX="30.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_RuleType" Width="1.5" PointX="30.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_SAC" Width="1.5" PointX="17.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_ServiceType_SAC_Mapping" Width="1.5" PointX="20" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_ServiceType_SCL_Mapping" Width="1.5" PointX="20" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_SKU" Width="1.5" PointX="35.75" PointY="243.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_State" Width="1.5" PointX="30.5" PointY="354.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_State_Document" Width="1.5" PointX="32.75" PointY="360.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Supplier" Width="1.5" PointX="30.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Tax" Width="1.5" PointX="20" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Tax_Detail" Width="1.5" PointX="22.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Tax_Setting" Width="1.5" PointX="17.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_TransportMode_ServiceType_Mapping" Width="1.5" PointX="31.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_TripCheckList" Width="1.5" PointX="5.75" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_TripCheckList_Document" Width="1.5" PointX="8" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_UnitTemperature" Width="1.5" PointX="19.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_User" Width="1.5" PointX="30.5" PointY="260.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_User_Company_Mapping" Width="1.5" PointX="32.75" PointY="270.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_User_Warehouse_Mapping" Width="1.5" PointX="35.75" PointY="278.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Vehicle" Width="1.5" PointX="6" PointY="239.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Vehicle_Capacity_Rate" Width="1.5" PointX="24.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Vehicle_ColdChainRate" Width="1.5" PointX="32.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Vehicle_Detail" Width="1.5" PointX="8.25" PointY="236.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_VehicleDocument" Width="1.5" PointX="32.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_VehicleType" Width="1.5" PointX="11.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Vendor" Width="1.5" PointX="16.5" PointY="335.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Vendor_Detail" Width="1.5" PointX="18.75" PointY="322.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Vendor_Gst_Detail" Width="1.5" PointX="18.75" PointY="328.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Vendor_VendorService_Mapping" Width="1.5" PointX="18.75" PointY="332.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_VendorContract" Width="1.5" PointX="18.75" PointY="344.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_VendorContract_BasicInfo" Width="1.5" PointX="21" PointY="298.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_VendorContract_DistanceBased" Width="1.5" PointX="21" PointY="334.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_VendorContract_DocketBased" Width="1.5" PointX="21" PointY="339.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_VendorContract_FtlBased" Width="1.5" PointX="21" PointY="345.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_VendorContract_LoadingUnloading" Width="1.5" PointX="21" PointY="350" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_VendorContract_RouteBased" Width="1.5" PointX="21" PointY="321.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Walkin_Customer" Width="1.5" PointX="32.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Walkin_Customer_Gst_Detail" Width="1.5" PointX="13.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Warehouse" Width="1.5" PointX="18.75" PointY="296.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Zone" Width="1.5" PointX="30.5" PointY="359.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_MilkRunsheetBill_Header" Width="1.5" PointX="32.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Mr_Bill_Detail" Width="1.5" PointX="24.75" PointY="274.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Mr_Docket_Charge_Detail" Width="1.5" PointX="18.75" PointY="261.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Mr_Header" Width="1.5" PointX="16.5" PointY="260.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_NumberWords" Width="1.5" PointX="32.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Order_Detail" Width="1.5" PointX="13" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Pfm_Detail" Width="1.5" PointX="23" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Pfm_Header" Width="1.5" PointX="20.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Pick_Detail" Width="1.5" PointX="32.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Pick_Location_Detail" Width="1.5" PointX="32.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_PO_Grn_Detail" Width="1.5" PointX="26.75" PointY="313.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_PO_Grn_Header" Width="1.5" PointX="22.5" PointY="275.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Pod" Width="1.5" PointX="16.5" PointY="376.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Prs_Charge_Detail" Width="1.5" PointX="40.25" PointY="294.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Prs_Header" Width="1.5" PointX="38" PointY="287" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Prs_Header_History" Width="1.5" PointX="15.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_PurchaseOrder_Detail" Width="1.5" PointX="24" PointY="353.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_PurchaseOrder_Header" Width="1.5" PointX="18.75" PointY="349.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_PutAway_Detail" Width="1.5" PointX="21.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_PutAway_Location_Detail" Width="1.5" PointX="34.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Repacking_Detail" Width="1.5" PointX="22" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Repacking_Header" Width="1.5" PointX="19.75" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_SpareRequest_Detail" Width="1.5" PointX="38" PointY="257.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_SpareRequest_Header" Width="1.5" PointX="35.75" PointY="257.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Status_Mst" Width="1.5" PointX="34.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Stock" Width="1.5" PointX="34.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Stock_SerialWise" Width="1.5" PointX="7.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Thc_Charge_Detail" Width="1.5" PointX="26" PointY="307.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Thc_Docket_Detail" Width="1.5" PointX="43.25" PointY="283.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Thc_Header" Width="1.5" PointX="23.75" PointY="291.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Thc_Header_History" Width="1.5" PointX="5.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Thc_Manifest_Detail" Width="1.5" PointX="18.75" PointY="279" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Thc_Manifest_LoadUnload" Width="1.5" PointX="34.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Thc_Summary" Width="1.5" PointX="35.75" PointY="282.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Tripsheet_Advance" Width="1.5" PointX="26.75" PointY="342.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Tripsheet_CheckList" Width="1.5" PointX="23.75" PointY="288.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Tripsheet_Enroute_Expense" Width="1.5" PointX="23.75" PointY="285.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Tripsheet_ExpectedDriverAdvance" Width="1.5" PointX="32.75" PointY="256" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Tripsheet_Header" Width="1.5" PointX="21.5" PointY="254.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Tripsheet_Lane_Detail" Width="1.5" PointX="23.75" PointY="311.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Tripsheet_Oil_Expense" Width="1.5" PointX="13.5" PointY="251" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_TripsheetBill_Header" Width="1.5" PointX="34.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Unloading_Header" Width="1.5" PointX="30.5" PointY="270.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Vehicle_Status" Width="1.5" PointX="34.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Vehicle_Status_History" Width="1.5" PointX="34.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_VehicleMaintenanceStatus" Width="1.5" PointX="34.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_VehicleStatusHeader" Width="1.5" PointX="34.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_VendorBill_Header" Width="1.5" PointX="26.75" PointY="293.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_VendorBill_OtherDetail" Width="1.5" PointX="11.25" PointY="252.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_VendorBill_Tax_Detail" Width="1.5" PointX="29" PointY="295.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_VendorDocumentApproval_History" Width="1.5" PointX="15.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_VendorPayment_Header" Width="1.5" PointX="23.75" PointY="348.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Voucher_AccountDetail" Width="1.5" PointX="5.25" PointY="250.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Voucher_Detail" Width="1.5" PointX="16.5" PointY="433.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Voucher_Summary" Width="1.5" PointX="23.75" PointY="341.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.SAL_Email_Log" Width="1.5" PointX="23.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Account_Transaction" Width="1.5" PointX="5.25" PointY="388" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Adjustment_Detail" Width="1.5" PointX="25.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.Cl_Automail_Archive" Width="1.5" PointX="30.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.Cl_Automail_Fail" Width="1.5" PointX="36.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.Cl_Automail_staging" Width="1.5" PointX="36.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_CreditDebit_TaxDetail" Width="1.5" PointX="36.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.Cl_CreditDebitNote_Detail" Width="1.5" PointX="36.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.Cl_CreditDebitNote_TaxDetail" Width="1.5" PointX="17.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_CustomerBill_Detail_Log" Width="1.5" PointX="36.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_CustomerBill_ReAssign" Width="1.5" PointX="36.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_CustomerBill_Tax_Detail" Width="1.5" PointX="14.25" PointY="285.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Deps_Header" Width="1.5" PointX="36.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_ChangeStatus" Width="1.5" PointX="27.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_Charge_Detail_BillHistory" Width="1.5" PointX="36.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_Charge_Detail_History" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_Charge_Detail_ReInvoke_History" Width="1.5" PointX="36.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_Charge_History" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_Charge_ReInvoke_History" Width="1.5" PointX="19.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_Detail_History" Width="1.5" PointX="3" PointY="31.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_Document_History" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_GPRO" Width="1.5" PointX="32.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_Invoice_History" Width="1.5" PointX="3" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_Invoice_Part_History" Width="1.5" PointX="3" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_Package" Width="1.5" PointX="38.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_ReAssign" Width="1.5" PointX="38.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_Summary_History" Width="1.5" PointX="3" PointY="51.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_Tax_Detail_History" Width="1.5" PointX="3" PointY="48.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Docket_Tax_Detail_ReInvoke_History" Width="1.5" PointX="5.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Drs__MultiAdvance" Width="1.5" PointX="38.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Drs_Charge_Detail_History" Width="1.5" PointX="20" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Drs_Detail" Width="1.5" PointX="7.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Drs_Detail_History" Width="1.5" PointX="20" PointY="26.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_FastTag_Transaction" Width="1.5" PointX="32.75" PointY="277.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_FuelRequest" Width="1.5" PointX="35.75" PointY="261.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_ManifestLabourDC_Detail" Width="1.5" PointX="9.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Approval_History" Width="1.5" PointX="38.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_AutoMailService_History" Width="1.5" PointX="32.75" PointY="282.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_CityWiseFuelRate_History" Width="1.5" PointX="32.75" PointY="298.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_CustomerContract_ChargeMatrix_FCL" Width="1.5" PointX="24.5" PointY="248.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_CustomerContract_ChargeMatrix_FTL" Width="1.5" PointX="30.5" PointY="252.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_CustomerContract_ChargeMatrix_LTL" Width="1.5" PointX="19.5" PointY="247" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_CustomerContract_ChargeMatrix_STD" Width="1.5" PointX="35" PointY="397.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_CustomerContract_CopyContractDetail" Width="1.5" PointX="11.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Part_Detail" Width="1.5" PointX="38.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Part_Header" Width="1.5" PointX="13.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Part_HeaderList" Width="1.5" PointX="38.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Rate" Width="1.5" PointX="38.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Route_CityWise_Detail" Width="1.5" PointX="38.75" PointY="238.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_Vehicle_Capacity_Rate_Detail" Width="1.5" PointX="38.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_VendorContract_CityBased" Width="1.5" PointX="21" PointY="353.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Master_VendorContract_CrossingBased" Width="1.5" PointX="21" PointY="306.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_MilkRunsheetBill_Detail" Width="1.5" PointX="38.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Order_Header" Width="1.5" PointX="34.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Prs__MultiAdvance" Width="1.5" PointX="36.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Prs_Charge_Detail_History" Width="1.5" PointX="18" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Prs_Detail_History" Width="1.5" PointX="18" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_StandardRouteCharge_Enroute_Expense_History" Width="1.5" PointX="38.75" PointY="263.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Thc__MultiAdvance" Width="1.5" PointX="38.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Thc_Charge_Detail_History" Width="1.5" PointX="8" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Thc_Docket_Detail_History" Width="1.5" PointX="8" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Thc_FuelSlip" Width="1.5" PointX="15.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Thc_Manifest_Detail_History" Width="1.5" PointX="8" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Thc_Summary_History" Width="1.5" PointX="8" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Tripsheet_DriverSettlement" Width="1.5" PointX="28.75" PointY="348.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Tripsheet_FuelSlip" Width="1.5" PointX="29.75" PointY="290.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Tripsheet_Thc_Detail" Width="1.5" PointX="23.75" PointY="323" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Tripsheet_VehicleLog_Detail" Width="1.5" PointX="21.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_TripsheetBill_Detail" Width="1.5" PointX="23.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_Vendor_Document_Approval" Width="1.5" PointX="40.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_VendorBill_Charge_Detail" Width="1.5" PointX="29" PointY="298.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_VendorBill_Detail" Width="1.5" PointX="29" PointY="301.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_VendorBill_FastTagDetail" Width="1.5" PointX="40.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_VendorBill_ReAssign" Width="1.5" PointX="40.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.CL_VendorPayment_Detail" Width="1.5" PointX="26" PointY="349.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.Comm_Email_Config" Width="1.5" PointX="40.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.Message" Width="1.5" PointX="40.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.Temp_ChargeList" Width="1.5" PointX="40.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.temp_CL_Master_City" Width="1.5" PointX="25.75" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.temp_CL_Master_City_Backup_29032023" Width="1.5" PointX="40.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.temp_CL_Master_Vehicle" Width="1.5" PointX="27.75" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.temp_Master_Customer" Width="1.5" PointX="29.75" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.temp_Master_Part_Header_22072023" Width="1.5" PointX="40.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.temp_Master_Vendor" Width="1.5" PointX="40.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.temp_PartHeader" Width="1.5" PointX="40.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.XmlDocketUpload" Width="1.5" PointX="31.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MLPLModel.XmlDocketUploadInSystem" Width="1.5" PointX="36.75" PointY="41.75" IsExpanded="true" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Adjustment_Header_CompanyId_CL_Master_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Adjustment_Header_LocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Adjustment_Header_UserId_CL_Master_User" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Advice_CompanyId_CL_Master_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Advice_LocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Advice_RaisedLocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Cheque_Detail_BankId_CL_Master_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Cheque_Detail_CompanyId_CL_Master_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Mr_Header_ChequeId_CL_Cheque_Detail" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_Cl_CreditNote_Detail_CreditDebitNoteId" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_CustomerBill_Detail_BillId_CL_CustomerBill_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_CustomerBill_Detail_DocketId_CL_Docket" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_CustomerBill_Header_CollectionLocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_CustomerBill_Header_CollectionUserId_CL_Master_User" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_CustomerBill_Header_CompanyId_CL_Master_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_CustomerBill_Header_CustomerId_CL_Master_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_CustomerBill_Header_GenerateLocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_CustomerBill_Header_GenerateUserId_CL_Master_User" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_CustomerBill_Header_SubmissionLocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_CustomerBill_Supplementry_Detail_BillId_CL_CustomerBill_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_CustomerBill_Tax_Detail_BillId_CL_CustomerBill_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_CustomerBill_Tripsheet_Detail_BillId_CL_CustomerBill_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Mr_Bill_Detail_BillId_CL_CustomerBill_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_CustomerBill_Supplementry_Detaill_AccountId_CL_Master_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_CustomerBill_Tripsheet_Detail_TripsheetId_CL_Tripsheet_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_DCR_LocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_DCR_Management_History_Id_CL_DCR" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Document_Void_CL_DCR" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Deps_Detail_DocketId_DocketSuffix_CL_Docket_Summary" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Deps_History_DepsDocketId_CL_Deps_Detail" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Deps_History_LocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Docket_BillLocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Docket_Charge_CL_Docket_DocketId" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Docket_Charge_Detail_CL_Docket_DocketId" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Docket_Detail_CL_Docket_DocketId" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Docket_Document_CL_Docket_DocketId" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Docket_FromLocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Docket_Invoice_CL_Docket_DocketId" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Docket_Summary_DocketId_CL_Docket" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Docket_Tax_Detail_CL_Docket_DocketId" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Docket_ToLocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Mr_Header_DocketId_CL_Docket" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Docket_BookingChallan_Detail_ChallanId_CL_Docket_BookingChallan" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Docket_BookingChallan_VendorId_CL_Master_Vendor" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Docket_Charge_AdvanceVoucherId_CL_Voucher_Detail" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Docket_Charge_CL_Master_CustomerContract_ContractId" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Docket_Charge_CompanyGstId_CL_Master_Gst" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Docket_Charge_Detail_History_CL_Docket_HistoryId" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Docket_Charge_History_CL_Docket_HistoryId" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Docket_Detail_History_CL_Docket_HistoryId" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Docket_Document_History_CL_Docket_HistoryId" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Docket_Invoice_History_CL_Docket_HistoryId" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Docket_Invoice_Part_History_CL_Docket_HistoryId" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Docket_Summary_History_CL_Docket_HistoryId" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Docket_Tax_Detail_History_CL_Docket_HistoryId" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Docket_Status_DocketId_Docket_Summary" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Docket_Status_LocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Docket_Summary_ToLocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_LoadingSheet_Detail_CL_Docket_Summary" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Manifest_Detail_CL_Docket_Summary" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Mr_Docket_Charge_Detail_DocketId_CL_Docket_Summary" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Thc_Docket_Detail_CL_Docket_Summary" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Drs_Charge_Detail_DrsId_CL_Drs_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Drs_Header_EntryBy_CL_Master_User" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Drs_Header_LocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Drs_Header_VehicleId_CL_Master_Vehicle" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Drs_Charge_Detail_History_HistoryId_CL_Drs_Header_History" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Drs_Detail_History_HistoryId_CL_Drs_Header_History" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Flight_Days_FlightId_CL_Flight_Schedule_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Flight_Schedule_Detail_FlightId_CL_Flight_Schedule_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Flight_Schedule_Header_FromAirportId_CL_Master_Airport" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Flight_Schedule_Header_ToAirportId_CL_Master_Airport" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Inspection_Detail_CL_Inspection_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_JobOrder_Header_LocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_JobOrder_Header_VehicleId_CL_Master_Vehicle" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_JobOrder_SparePart_Detail_JobOrderId_CL_JobOrder_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_JobOrder_Task_Detail_JobOrderId_CL_JobOrder_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_SpareRequest_Header_JobOrderId_CL_JobOrder_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_JobOrder_Task_Detail_SkuId_CL_Master_SKU" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_JobOrder_Task_Detail_TaskId_CL_Master_JobOrder_Task" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_JobOrder_Task_Detail_TaskTypeId_CL_Master_JobOrder_TaskType" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_JobOrder_Task_Detail_WorkGroupId_CL_Master_JobOrder_WorkGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_LoadingSheet_Detail_LoadingSheetId_CL_LoadingSheet_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_LoadingSheet_Header_NextLocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Manifest_Detail_ManifestId_CL_Manifest_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Manifest_Header_NextLocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Thc_Manifest_Detail_ManifestId_CL_Manifest_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.CL_VendorBill_OtherDetail_AccountId_CL_Master_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Account_Transaction_AccountId_CL_Master_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Account_Transaction_OppositeAccountId_CL_Master_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Account_AccountCategoryId_CL_Master_AccountCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Account_AccountGroupId_CL_Master_AccountGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Account_CompanyId_CL_Master_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_AccountOpening_AccountId_CL_Master_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_AccountOpening_Party_AccountId_CL_Master_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Budget_AccountId_CL_Master_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Card_AccountId_CL_Master_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Charge_AccountId_CL_Master_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Fuel_Card_AccountId_CL_Master_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_JobOrder_TaskType_AccountId_CL_Master_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Voucher_AccountDetail_AccountId_CL_Master_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_AccountGroup_AccountCategoryId_CL_Master_AccountCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.CL_Master_AccountGroup_ParentGroupId_CL_Master_AccountGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Asset_AssetGroupId_CL_Master_AccountGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_AccountOpening_CompanyId_CL_Master_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_AccountOpening_LocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_AccountOpening_Party_LocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Customer_Address_Mapping_AddressId_CL_Master_Address" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_CustomerBillFormat_FormatId_CL_Master_BillFormat" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Bin_ParentBindId_CL_Master_Bin" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Bin_WarehouseId_CL_Master_Warehouse" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Bin_Hierarchy_WarehouseId_CL_Master_Warehouse" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Budget_CompanyId_CL_Master_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Budget_LocationId_CL_Master_BudgetGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Card_Detail_CardId_CL_Master_Card" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Card_VendorId_CL_Master_Vendor" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Tripsheet_Oil_Expense_CardId_CL_Master_Card" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_City_CL_Master_Zone" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_City_StateId_CL_Master_State" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_General_CodeTypeId_CL_Master_CodeType" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_FSCRate_CompanyId" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Lane_CompanyId" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_User_Company_Mapping_CompanyId_CL_Master_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Mr_Header_CompanyId_CL_Master_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Unloading_Header_CompanyId_CL_Master_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_State_CL_Master_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Zone_CountryId_CL_Master_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Customer_Address_Mapping_CustomerId_CL_Master_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Customer_AddressInfo_CustomerId_CL_Master_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Customer_Detail_CustomerId_CL_Master_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Customer_Paybas_Mapping_CustomerId_CL_Master_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_CustomerBillFormat_CustomerId_CL_Master_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_CustomerGroupCode_CL_Master_CustomerGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_FSCRate_CustomerId" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Lane_CustomerId" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Product_Customer_Mapping_ConsigneeId_CL_Master_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Product_Customer_Mapping_ConsignorId_CL_Master_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Mr_Header_CustomerId_CL_Master_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Tripsheet_Header_CustomerId_CL_Master_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_CustomerContract_ODA_Distance_ContractId_CL_CustomerContract" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_CustomerContract_ODA_Matrix_ContractId_CL_CustomerContract" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_CustomerContract_ODA_Slab_ContractId_CL_CustomerContract" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_CustomerContract_BasicInfo_ContractId_CL_Master_CustomerContract" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_CustomerContract_BillingInfo_ContractId_CL_Master_CustomerContract" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_CustomerContract_ChargeMatrix_FCL_ContractId_CL_Master_CustomerContract" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_CustomerContract_ChargeMatrix_FTL_ContractId_CL_Master_CustomerContract" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_CustomerContract_ChargeMatrix_LTL_ContractId_CL_Master_CustomerContract" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_CustomerContract_ChargeMatrix_STD_ContractId_CL_Master_CustomerContract" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_CustomerContract_DefineChargeMatrix_ContractId_CL_Master_CustomerContract" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_CustomerContract_FleetCharge_ContractId_CL_Master_CustomerContract" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_CustomerContract_ModewiseServices_ContractId_CL_Master_CustomerContract" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_CustomerContract_RateMatrix_ContractId_CL_CustomerContract" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_CustomerContract_RateMatrix_SlabRange_ContractId_CL_CustomerContract" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_CustomerContract_RateMatrix_SlabRate_ContractId_CL_Master_CustomerContract" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_CustomerContract_RiskMatrix_ContractId_CL_Master_CustomerContract" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_CustomerContract_ServiceAccess_ContractId_CL_Master_CustomerContract" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_CustomerContract_ServiceAccess_FreightContractId_CL_Master_CustomerContract" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_CustomerContract_Services_ContractId_CL_Master_CustomerContract" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_CustomerContract_BasicInfo_LocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_CustomerContract_BillingInfo_BillCollectionLocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_CustomerContract_BillingInfo_BillGenerationLocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_CustomerContract_BillingInfo_BillSubmissionLocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Driver_Document_DriverId_CL_Master_Driver" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Driver_DriverLocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Driver_VehicleId_CL_Master_Vehicle" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Tripsheet_Header_FirstDriverId_CL_Master_Driver" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Tripsheet_Header_SecondDriverId_CL_Master_Driver" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Fuel_Card_FuelBrandId_CL_Master_Fuel_Brand" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Fuel_Card_VehicleId_CL_Master_Vehicle" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Fuel_Card_VendorId_CL_Master_Vendor" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Gst_StateId_CL_Master_State" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Voucher_Summary_CompanyGstId_CL_Master_Gst" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_JobOrder_Task_TaskTypeId_CL_Master_JobOrder_TaskType" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_JobOrder_Task_WorkGroupId_CL_Master_JobOrder_WorkGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK__CL_FuelRe__Locat__0353107C" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_CustomerContract_ChargeMatrix_FCL_BillLocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_CustomerContract_ChargeMatrix_FTL_BillLocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_CustomerContract_ChargeMatrix_LTL_BillLocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Location_ReportLocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Pincode_LocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Receiver_LocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Route_Detail_LocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Route_LocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_User_LocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_VendorContract_BasicInfo_LocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_VendorContract_BasicInfo_PaymentLocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_VendorContract_CrossingBased_FromLocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Warehouse_LocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Mr_Header_LocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_PO_Grn_Header_LocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Pod_LocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Prs_Header_LocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_PurchaseOrder_Header_LocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_SpareRequest_Header_LocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Thc_Header_AdvanceLocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Thc_Header_CL_Master_Location_CurrentLocationId" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Thc_Header_FromLocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Thc_Header_ToLocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Tripsheet_ExpectedDriverAdvance_LocationId_CL_Master_Vendor" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Tripsheet_Header_EndLocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Tripsheet_Header_LocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Tripsheet_Header_StartLocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Unloading_Header_LocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_VendorBill_Header_LocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_VendorPayment_Header_LocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Voucher_Detail_LocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Voucher_Summary_AccountingLocationId_CL_Master_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Menu_Access_MenuId" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_RoleBasedMenu_Access_MenuId" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Menu_Access_RoleId" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Product_Customer_Mapping_ProductId_CL_Master_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Order_Detail_CL_Master_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_RoleBasedMenu_Access_RoleId" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_User_RoleId_CL_Master_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Route_Detail_RouteId_CL_Master_Route" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_VendorContract_RouteBased_RouteId_CL_Master_Route" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK__CL_Standa__Route__60FDF878" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Route_CityWise_Detail_RouteId_CL_Master_Route" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_ServiceType_SAC_Mapping_SacId_CL_Master_SAC" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_ServiceType_SCL_Mapping_SacId_CL_Master_SAC" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_PO_Grn_Detail_SkuId_CL_Master_SKU" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_PurchaseOrder_Detail_SkuId_CL_Master_SKU" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_SpareRequest_Detail_SkuId_CL_Master_SKU" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_State_Document_StateId_CL_Master_State" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Tax_Detail" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Tax_PK_CL_Master_Tax_Setting" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_TripCheckList_Document_CheckListId_CL_Master_TripCheckList" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK__CL_FastTa__Entry__4F48913A" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK__CL_FuelRe__Entry__503CB573" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK__CL_Master__Entry__5FD33367" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK__CL_Master__Entry__6443AE20" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK__CL_Master__Entry__67201ACB" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK__CL_Master__Entry__6E2152BE" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK__CL_Standa__Entry__61F21CB1" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_User_Company_Mapping_UserId_CL_Master_User" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_User_ManagerId_CL_Master_User" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_User_Warehouse_Mapping_UserId_CL_Master_User" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Prs_Header_EntryBy_CL_Master_User" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Thc_Summary_LoadBy_CL_Master_User" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_User_Warehouse_Mapping_WarehouseId_CL_Master_Warehouse" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Vehicle_Detail_VehicleId_CL_Master_Vehicle" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Prs_Header_VehicleId_CL_Master_Vehicle" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Tripsheet_Header_VehicleId_CL_Master_Vehicle" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK__CL_Master__Vendo__68143F04" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK__CL_Master__Vendo__6F1576F7" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_CustomerContract_VendorId_CL_Master_Vendor" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Vendor_Detail_VendorId_CL_Master_Vendor" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Vendor_Gst_Detail_VendorId_CL_Master_Vendor" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_Vendor_VendorService_Mapping_VendorId_CL_Master_Vendor" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Prs_Header_VendorId_CL_Master_Vender" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_PurchaseOrder_Header_VendorId_CL_Master_Vendor" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Thc_Header_VendorId_CL_Master_Vender" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Tripsheet_FuelSlip_VendorId_CL_Master_Vendor" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_VendorBill_Header_VendorId_CL_Master_Vendor" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_VendorContract_BasicInfo_ContractId_CL_Master_VendorContract" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_VendorContract_CityBased_ContractId_CL_Master_VendorContract" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_VendorContract_CrossingBased_ContractId_CL_Master_VendorContract" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_VendorContract_DistanceBased_ContractId_CL_Master_VendorContract" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_VendorContract_DocketBased_ContractId_CL_Master_VendorContract" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_VendorContract_FtlBased_ContractId_CL_Master_VendorContract" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_VendorContract_LoadingUnloading_ContractId_CL_Master_VendorContract" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Master_VendorContract_RouteBased_ContractId_CL_Master_VendorContract" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Thc_Header_WarehouseId_CL_Master_Warehouse" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Mr_Bill_Detail_MrId_CL_Mr_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Mr_Docket_Charge_Detail_MrId_CL_Mr_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Pfm_Detail_PfmId_CL_Pfm_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_PO_Grn_Detail_PoId_CL_PO_Grn_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_PO_Grn_Detail_PoId_CL_PurchaseOrder_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_PO_Grn_Header_PoId_CL_PurchaseOrder_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Prs_Charge_Detail_PrsId_CL_Prs_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Prs_Charge_Detail_History_HistoryId_CL_Prs_Header_History" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Prs_Detail_History_HistoryId_CL_Prs_Header_History" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_PurchaseOrder_Detail_PoId_CL_PurchaseOrder_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_PurchaseOrder_Header_VoucherId_CL_Voucher_Detail" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Repacking_Detail_CL_Repacking_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_SpareRequest_Detail_SpareRequestId_CL_SpareRequest_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Thc_Charge_Detail_ThcId_CL_Thc_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Thc_Docket_Detail_ThcId_CL_Thc_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Thc_Manifest_Detail_ThcId_CL_Thc_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Thc_Summary_ThcId_CL_Thc_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Thc_Charge_Detail_History_HistoryId_CL_Thc_Header_History" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Thc_Docket_Detail_History_CL_Thc_Header_HistoryId" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Thc_Manifest_Detail_History_CL_Thc_Header_HistoryId" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Thc_Summary_History_CL_Thc_Header_HistoryId" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Tripsheet_Advance_TripsheetId_CL_Tripsheet_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Tripsheet_Header_VoucherId_CL_Voucher_Detail" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Tripsheet_CheckList_TripsheetId_CL_Tripsheet_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Tripsheet_En_Route_Expense_TripsheetId_CL_Tripsheet_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Tripsheet_ExpectedDriverAdvance_TripsheetId_CL_Tripsheet_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK__CL_FuelRe__Trips__5224FDE5" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Tripsheet_DriverSettlement_TripsheetId_CL_Tripsheet_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Tripsheet_FuelSlip_TripsheetId_CL_Tripsheet_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Tripsheet_Lane_Detail_TripsheetId_CL_Tripsheet_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Tripsheet_Oil_Expense_TripsheetId_CL_Tripsheet_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Tripsheet_Thc_Detail_TripsheetId_CL_Tripsheet_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.CL_VendorBill_OtherDetail_BillId_CL_VendorBill_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_VendorBill_Charge_Detail_BillId_CL_VendorBill_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_VendorBill_Detail_BillId_CL_VendorBill_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_VendorBill_Tax_Detail_CL_VendorBill_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_VendorPayment_Detail_PaymentId_CL_VendorPayment_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_VendorPayment_Header_VoucherId_CL_Voucher_Detail" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Voucher_AccountDetail_VoucherId_CL_Voucher_Detail" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Tripsheet_DriverSettlement_VoucherId_CL_Voucher_Detail" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.FK_CL_Voucher_Summary_VoucherId_CL_Voucher_Detail" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.CL_Docket_Dispatch_Detail" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.CL_Master_Account_Location_Mapping" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.CL_Master_Customer_Location_Mapping" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.CL_Master_Holiday_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.CL_Master_Location_DataEntry" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.CL_Master_Vendor_Location_Mapping" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.CL_Master_Vendor_Warehouse_Mapping" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.CL_Prs_Detail" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.CL_Tripsheet_Card" ManuallyRouted="false" />
+        <AssociationConnector Association="MLPLModel.CL_Tripsheet_Docket" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

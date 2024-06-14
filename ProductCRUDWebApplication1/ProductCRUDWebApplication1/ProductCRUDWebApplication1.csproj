@@ -1,0 +1,1330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4455D5C2-CC18-4699-9CCF-2394A93A6991}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProductCRUDWebApplication1</RootNamespace>
+    <AssemblyName>ProductCRUDWebApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\lib\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.3.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.3.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.3.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.3.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.3.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.3.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ConsignmentTrackController.cs" />
+    <Compile Include="Controllers\EwaybillController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\StateController.cs" />
+    <Compile Include="Controllers\VehicleController.cs" />
+    <Compile Include="Controllers\VehicleTrackingServiceController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AC_Master_VendorContract_LoadingUnloading.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Account_Transaction.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Adjustment_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Adjustment_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Advice.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Advice_Acknowledgement_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Asn_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cl_Automail_Archive.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cl_Automail_Fail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cl_Automail_staging.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Cheque_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Consignor_Consignee_Mapping.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cl_CreditDebitNote_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cl_CreditDebitNote_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cl_CreditDebitNote_TaxDetail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_CreditDebit_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_CreditDebit_TaxDetail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_CustomerBill_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_CustomerBill_Detail_Log.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_CustomerBill_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_CustomerBill_Header_Log.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_CustomerBill_ReAssign.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_CustomerBill_Submission_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_CustomerBill_Supplementry_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_CustomerBill_Tax_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_CustomerBill_Tripsheet_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_DCR.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_DCR_Management_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Deps_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Deps_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Deps_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_BookingChallan.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_BookingChallan_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_ChangeStatus.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_ChangeStatus_Trn.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_Charge.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_Charge_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_Charge_Detail_BillHistory.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_Charge_Detail_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_Charge_Detail_ReInvoke_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_Charge_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_Charge_ReInvoke_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_DACC.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_Detail_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_Dispatch_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_Document.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_Document_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_GPRO.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_HoldUnhold.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_Invoice.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_Invoice_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_Invoice_Part.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_Invoice_Part_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_Package.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_ReAssign.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_Status.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_Status_Trn.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_Summary.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_Summary_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_Talk.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_Tax_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_Tax_Detail_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_Tax_Detail_ReInvoke_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_Tpl_Charge_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Docket_Tpl_Tax_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Document_Nomenclature.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Document_Void.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Drs_Charge_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Drs_Charge_Detail_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Drs_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Drs_Detail_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Drs_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Drs_Header_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Drs__MultiAdvance.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Error.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_EWayBill_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_FastTag_Transaction.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Flight_Days.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Flight_Schedule_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Flight_Schedule_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_FuelRequest.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Gatepass_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Grn_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Inspection_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Inspection_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_JobOrder_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_JobOrder_SparePart_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_JobOrder_Task_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_LoadingSheet_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_LoadingSheet_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_ManifestLabourDC_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_ManifestLabourDC_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Manifest_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Manifest_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Account.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_AccountCategory.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_AccountGroup.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_AccountOpening.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_AccountOpening_Party.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Address.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Airport.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Application_Setting.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Approval_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Asset.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_AutoMailService_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_BillFormat.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Bin.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Bin_Hierarchy.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Budget.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Card.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Card_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Charge.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_City.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_CityWiseFuelRate_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_CodeType.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Company.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Country.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Customer.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_CustomerBillFormat.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_CustomerContract.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_CustomerContract_BasicInfo.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_CustomerContract_BillingInfo.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_CustomerContract_ChargeMatrix_FCL.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_CustomerContract_ChargeMatrix_FTL.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_CustomerContract_ChargeMatrix_LTL.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_CustomerContract_ChargeMatrix_STD.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_CustomerContract_CopyContractDetail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_CustomerContract_DefineChargeMatrix.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_CustomerContract_FleetCharge.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_CustomerContract_Invoke.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_CustomerContract_ModewiseServices.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_CustomerContract_ODA_Distance.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_CustomerContract_ODA_Matrix.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_CustomerContract_ODA_Slab.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_CustomerContract_RateMatrix.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_CustomerContract_RateMatrix_SlabRange.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_CustomerContract_RateMatrix_SlabRate.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_CustomerContract_RiskMatrix.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_CustomerContract_ServiceAccess.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_CustomerContract_Services.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_CustomerGroup.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Customer_AddressInfo.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Customer_Address_Mapping.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Customer_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Customer_Paybas_Mapping.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Document_Control.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Driver.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Driver_Document.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Fields.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_FinancialYearRight.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_FSCRate.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_FuelSurchargeRevision.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Fuel_Brand.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Fuel_Card.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_General.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_General_Rule_Values.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Gst.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Holiday_Datewise.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Holiday_Weekday.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_HSN.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Issue.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Issue_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_JobOrder_Task.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_JobOrder_TaskType.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_JobOrder_WorkGroup.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Labour.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Lane.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Location.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Location_Hierarchy.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Menu.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Menu_Access.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_PackagingMeasurement.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Part_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Part_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Part_HeaderList.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Pincode.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Product.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_ProductTemperature.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Product_Customer_Mapping.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Rate.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Receiver.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Report_ColumnList.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Role.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_RoleBasedMenu_Access.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Route.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Route_CityWise.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Route_CityWise_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Route_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Rules.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_RuleType.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_SAC.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_ServiceType_SAC_Mapping.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_ServiceType_SCL_Mapping.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_SKU.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_State.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_State_Document.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Supplier.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Tax.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Tax_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Tax_Setting.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_TransportMode_ServiceType_Mapping.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_TripCheckList.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_TripCheckList_Document.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_UnitTemperature.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_User.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_User_Company_Mapping.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_User_Warehouse_Mapping.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Vehicle.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_VehicleDocument.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_VehicleType.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Vehicle_Capacity_Rate.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Vehicle_Capacity_Rate_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Vehicle_ColdChainRate.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Vehicle_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Vendor.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_VendorContract.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_VendorContract_BasicInfo.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_VendorContract_CityBased.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_VendorContract_CrossingBased.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_VendorContract_DistanceBased.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_VendorContract_DocketBased.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_VendorContract_FtlBased.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_VendorContract_LoadingUnloading.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_VendorContract_RouteBased.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Vendor_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Vendor_Gst_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Vendor_VendorService_Mapping.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Walkin_Customer.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Walkin_Customer_Gst_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Warehouse.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Master_Zone.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_MilkRunsheetBill_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_MilkRunsheetBill_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Mr_Bill_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Mr_Docket_Charge_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Mr_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_NumberWords.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Order_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Order_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Pfm_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Pfm_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Pick_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Pick_Location_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Pod.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_PO_Grn_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_PO_Grn_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Prs_Charge_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Prs_Charge_Detail_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Prs_Detail_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Prs_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Prs_Header_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Prs__MultiAdvance.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_PurchaseOrder_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_PurchaseOrder_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_PutAway_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_PutAway_Location_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Repacking_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Repacking_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_SpareRequest_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_SpareRequest_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_StandardRouteCharge_Enroute_Expense_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Status_Mst.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Stock.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Stock_SerialWise.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Thc_Charge_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Thc_Charge_Detail_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Thc_Docket_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Thc_Docket_Detail_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Thc_FuelSlip.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Thc_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Thc_Header_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Thc_Manifest_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Thc_Manifest_Detail_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Thc_Manifest_LoadUnload.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Thc_Summary.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Thc_Summary_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Thc__MultiAdvance.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_TripsheetBill_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_TripsheetBill_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Tripsheet_Advance.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Tripsheet_CheckList.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Tripsheet_DriverSettlement.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Tripsheet_Enroute_Expense.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Tripsheet_ExpectedDriverAdvance.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Tripsheet_FuelSlip.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Tripsheet_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Tripsheet_Lane_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Tripsheet_Oil_Expense.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Tripsheet_Thc_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Tripsheet_VehicleLog_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Unloading_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_VehicleMaintenanceStatus.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_VehicleStatusHeader.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Vehicle_Status.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Vehicle_Status_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_VendorBill_Charge_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_VendorBill_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_VendorBill_FastTagDetail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_VendorBill_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_VendorBill_OtherDetail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_VendorBill_ReAssign.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_VendorBill_Tax_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_VendorDocumentApproval_History.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_VendorPayment_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_VendorPayment_Header.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Vendor_Document_Approval.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Voucher_AccountDetail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Voucher_Detail.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CL_Voucher_Summary.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Comm_Email_Config.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EMP_MLPL.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EMP_MLPL.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EMP_MLPL.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EMP_MLPL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EMP_MLPL.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ewayBill.cs">
+      <DependentUpon>ProductDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Message.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductDBModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductDBModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductDBModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductDBModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductDBModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SAL_Email_Log.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\State.cs">
+      <DependentUpon>ProductDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblProduct.cs">
+      <DependentUpon>ProductDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Temp_ChargeList.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\temp_CL_Master_City.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\temp_CL_Master_City_Backup_29032023.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\temp_CL_Master_Vehicle.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\temp_Master_Customer.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\temp_Master_Part_Header_22072023.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\temp_Master_Vendor.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\temp_PartHeader.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>ProductDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\XmlDocketUpload.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\XmlDocketUploadInSystem.cs">
+      <DependentUpon>EMP_MLPL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\ProductDB.mdf" />
+    <Content Include="App_Data\ProductDB_log.ldf">
+      <DependentUpon>ProductDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\js\CustomJS.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Models\EMP_MLPL.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EMP_MLPL.edmx</DependentUpon>
+      <LastGenOutput>EMP_MLPL.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\EMP_MLPL.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EMP_MLPL.edmx</DependentUpon>
+      <LastGenOutput>EMP_MLPL.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ProductDBModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ProductDBModel.Context.cs</LastGenOutput>
+      <DependentUpon>ProductDBModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\ProductDBModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ProductDBModel.edmx</DependentUpon>
+      <LastGenOutput>ProductDBModel.cs</LastGenOutput>
+    </Content>
+    <EntityDeploy Include="Models\ProductDBModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ProductDBModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ProductDBModel.edmx.diagram">
+      <DependentUpon>ProductDBModel.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\EMP_MLPL.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EMP_MLPL.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\EMP_MLPL.edmx.diagram">
+      <DependentUpon>EMP_MLPL.edmx</DependentUpon>
+    </Content>
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-3.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.7.1.js" />
+    <Content Include="Scripts\jquery-3.7.1.min.js" />
+    <Content Include="Scripts\jquery-3.7.1.slim.js" />
+    <Content Include="Scripts\jquery-3.7.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\Product\Create.cshtml" />
+    <Content Include="Views\Product\Edit.cshtml" />
+    <Content Include="Views\State\Create.cshtml" />
+    <Content Include="Views\State\Index.cshtml" />
+    <Content Include="Views\Ewaybill\Index.cshtml" />
+    <Content Include="Views\ConsignmentTrack\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\VehicleTrackingService\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\jquery-3.7.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.7.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\Images\" />
+    <Folder Include="Views\ApplicationContext\" />
+    <Folder Include="Views\Vehicle\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61953</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:61953/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

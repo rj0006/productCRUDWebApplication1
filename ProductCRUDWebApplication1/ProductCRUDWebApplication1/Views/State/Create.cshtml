@@ -1,0 +1,31 @@
+﻿@model ProductCRUDWebApplication1.Models.State
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Add New State</h2>
+
+<a href="@Url.Action("Index", "State")" class="btn btn-primary">List</a>
+
+@using (Html.BeginForm("Create", "State", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <table class="table">
+        <tr>
+            <td>Enter state name : </td>
+            <td>@Html.EditorFor(Model => Model.state_name, new { htmlAttributes = new { @class = "form-control" } })</td>
+        </tr>
+        <tr>
+            <td>State Code : </td>
+            <td>@Html.EditorFor(Model => Model.state_code, new { htmlAttributes = new { @class = "form-control" } })</td>
+        </tr>
+        <tr>
+            <td>Enter Country : </td>
+            <td>@Html.EditorFor(Model => Model.state_country, new { htmlAttributes = new { @class = "form-control" } })</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" name="submit" value="Submit" , class="btn btn-success text-center" />
+            </td>
+        </tr>
+    </table>
+}

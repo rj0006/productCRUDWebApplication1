@@ -1,0 +1,96 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+@{
+    var responseData = ViewBag.responseData;
+    var parsedResponse = ViewBag.parsedResponse;
+}
+
+<h5>Vehicle Tracking Service</h5>
+
+<form method="post" action="/VehicleTrackingService/Index">
+    <label for="chassisNo">Chassis Number:</label><br />
+    <input type="text" id="chassisNo" name="chassisNo" required />
+    <br />
+    <input type="submit" value="Submit" />
+</form>
+
+
+
+@*
+    <h2>Response Data:</h2>
+    <pre>@ViewBag.CheckResponse</pre>
+*@
+
+@if (ViewBag.CheckResponse != null)
+{
+
+    if (ViewBag.CheckResponse.IsSuccessStatusCode)
+    {
+        <h2>Parsed Response:</h2>
+        foreach (var item in parsedResponse)
+        {
+            <h5>Chassis Number: @item.chassisNo</h5>
+            <p>Device Name: @item.deviceName</p>
+            <p>Position Data:</p>
+            <ul>
+                @foreach (var position in item.positiondata)
+                {
+                    <li>
+                        Latitude: @position.lattitude, Longitude: @position.longitude<br>
+                        Position DateTime: @position.positionDateTime<br>
+                        Vehicle Registration Number: @position.vehicleRegistrationNumber<br>
+                        Speed: @position.speed<br>
+                        Total Engine Hours: @position.totalEngineHours<br>
+                        Total Fuel Consumption: @position.totalFuelConsumption<br>
+                        Fuel Level: @position.fuelLevel<br>
+                        Idle Time: @position.idleTime<br>
+                        Heading: @position.heading<br>
+                        Altitude: @position.altitude<br>
+                        Odometer: @position.odometer<br>
+                        Ignition Status: @position.ignitionStatus<br>
+                    </li>
+                }
+            </ul>
+        }
+
+        <div id="mapid" style="height: 400px;"></div>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+        <script>
+            var lat = @ViewBag.parsedResponse[0].positiondata[0].lattitude;
+            var long = @ViewBag.parsedResponse[0].positiondata[0].longitude;
+            console.log(lat, long)
+            var mymap = L.map('mapid').setView([lat, long], 13);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+            }).addTo(mymap);
+
+            var marker = L.marker([lat, long]).addTo(mymap);
+            marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+
+            // Reverse geocoding to get the address
+            fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${long}`)
+                .then(response => response.json())
+                .then(data => {
+                    var address = data.display_name;
+                    console.log(address);
+
+                    // Update the popup with the address
+                    marker.bindPopup(`<b>Address:</b><br>${address}`).openPopup();
+                })
+                .catch(error => {
+                    console.error('Error fetching address:', error);
+                });
+        </script>
+    }
+    else
+    {
+        <script>
+            alert("Chassis not subscribed or wrong chasis number");
+        </script>
+    }
+ }

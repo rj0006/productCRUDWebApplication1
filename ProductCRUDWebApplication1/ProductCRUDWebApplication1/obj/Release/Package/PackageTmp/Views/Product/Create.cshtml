@@ -1,0 +1,35 @@
+﻿@model ProductCRUDWebApplication1.Models.tblProduct
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Add a new product</h2>
+
+<a href="@Url.Action("Index", "Product")" class="btn btn-primary">List</a>
+
+@using (Html.BeginForm("Create", "Product", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <table class="table">
+        <tr>
+            <td>Enter new product name : </td>
+            <td>@Html.EditorFor(Model => Model.prod_name, new { htmlAttributes = new { @class = "form-control" } })</td>
+        </tr>
+        <tr>
+            <td>Enter new product Price : </td>
+            <td>@Html.EditorFor(Model => Model.prod_price, new { htmlAttributes = new { @class = "form-control" } })</td>
+        </tr>
+        <tr>
+            <td>Enter new product Qty : </td>
+            <td>@Html.EditorFor(Model => Model.prod_qty, new { htmlAttributes = new { @class = "form-control" } })</td>
+        </tr>
+        <tr>
+            <td>Choose a Product Image : </td>
+            <td><input type="file" name="postedFile" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" name="submit" value="Add Product" , class="btn btn-success text-center" />
+            </td>
+        </tr>
+    </table>
+}

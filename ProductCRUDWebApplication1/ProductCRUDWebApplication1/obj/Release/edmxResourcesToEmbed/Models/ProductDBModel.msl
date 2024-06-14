@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ProductDBModelStoreContainer" CdmEntityContainer="ProductDBEntities1">
+    <EntitySetMapping Name="tblProducts">
+      <EntityTypeMapping TypeName="ProductDBModel.tblProduct">
+        <MappingFragment StoreEntitySet="tblProducts">
+          <ScalarProperty Name="prod_id" ColumnName="prod_id" />
+          <ScalarProperty Name="prod_name" ColumnName="prod_name" />
+          <ScalarProperty Name="prod_price" ColumnName="prod_price" />
+          <ScalarProperty Name="prod_qty" ColumnName="prod_qty" />
+          <ScalarProperty Name="prod_pic" ColumnName="prod_pic" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="States">
+      <EntityTypeMapping TypeName="ProductDBModel.State">
+        <MappingFragment StoreEntitySet="State">
+          <ScalarProperty Name="state_country" ColumnName="state_country" />
+          <ScalarProperty Name="state_code" ColumnName="state_code" />
+          <ScalarProperty Name="state_name" ColumnName="state_name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

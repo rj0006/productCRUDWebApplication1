@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProductDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ewayBill">
+    <Key>
+      <PropertyRef Name="GSTIN" />
+    </Key>
+    <Property Name="GSTIN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="State" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="EWBUserName" Type="nchar" MaxLength="100" />
+    <Property Name="EWBPassword" Type="nchar" MaxLength="50" />
+    <Property Name="Year" Type="int" />
+    <Property Name="Month" Type="int" />
+    <Property Name="EFUserName" Type="nchar" MaxLength="255" />
+    <Property Name="EFPassword" Type="nchar" MaxLength="255" />
+    <Property Name="CDKey" Type="nchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="state_name" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="state_code" Type="nchar" MaxLength="10" />
+    <Property Name="state_country" Type="nchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tblProducts">
+    <Key>
+      <PropertyRef Name="prod_id" />
+    </Key>
+    <Property Name="prod_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="prod_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="prod_price" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="prod_qty" Type="int" Nullable="false" />
+    <Property Name="prod_pic" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ProductDBModelStoreContainer">
+    <EntitySet Name="ewayBill" EntityType="Self.ewayBill" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="State" EntityType="Self.State" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblProducts" EntityType="Self.tblProducts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

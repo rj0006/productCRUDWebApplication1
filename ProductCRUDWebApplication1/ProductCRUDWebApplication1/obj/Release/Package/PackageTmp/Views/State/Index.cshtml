@@ -1,0 +1,32 @@
+﻿@model List<ProductCRUDWebApplication1.Models.State>
+@{
+    ViewBag.Title = "Index";
+}
+
+<a href="@Url.Action("Create", "State")" class="btn btn-primary">Add New State</a>
+
+<h2>List of all State</h2>
+<table class="table table-bordered table-striped table-hover">
+    <tr>
+        <th>State ID</th>
+        <th>Name</th>
+        <th>GST Code</th>
+        <th>Country</th>
+        <th>Action</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.state_name</td>
+            <td>@item.state_code</td>
+            <td>@item.state_country</td>
+            <td>
+                <a href="@Url.Action("Edit", "State", new { @id = item.Id })" class="btn btn-sm btn-warning">Edit</a>
+                <a href="@Url.Action("Delete", "State", new { @id = item.Id })" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure want to delete @item.state_name ?')">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
+
