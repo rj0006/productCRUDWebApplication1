@@ -27,8 +27,7 @@ namespace ProductCRUDWebApplication1.Models
     
         public virtual DbSet<tblProduct> tblProducts { get; set; }
         public virtual DbSet<State> States { get; set; }
-        public virtual DbSet<ewayBill> ewayBills { get; set; }
         public virtual DbSet<User> Users { get; set; }
-
+        public virtual DbSet<ewayBill> ewayBills { get; set; }
     }
 }

@@ -22,27 +22,23 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="ewayBills">
-      <EntityTypeMapping TypeName="ProductDBModel.ewayBill">
-        <MappingFragment StoreEntitySet="ewayBill">
-          <ScalarProperty Name="CDKey" ColumnName="CDKey" />
-          <ScalarProperty Name="EFPassword" ColumnName="EFPassword" />
-          <ScalarProperty Name="EFUserName" ColumnName="EFUserName" />
-          <ScalarProperty Name="Month" ColumnName="Month" />
-          <ScalarProperty Name="Year" ColumnName="Year" />
-          <ScalarProperty Name="EWBPassword" ColumnName="EWBPassword" />
-          <ScalarProperty Name="EWBUserName" ColumnName="EWBUserName" />
-          <ScalarProperty Name="State" ColumnName="State" />
-          <ScalarProperty Name="GSTIN" ColumnName="GSTIN" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="ProductDBModel.User">
         <MappingFragment StoreEntitySet="User">
           <ScalarProperty Name="Password" ColumnName="Password" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />
           <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ewayBills">
+      <EntityTypeMapping TypeName="ProductDBModel.ewayBill">
+        <MappingFragment StoreEntitySet="ewayBill">
+          <ScalarProperty Name="EWBPassword" ColumnName="EWBPassword" />
+          <ScalarProperty Name="EWBUserName" ColumnName="EWBUserName" />
+          <ScalarProperty Name="GSTIN" ColumnName="GSTIN" />
+          <ScalarProperty Name="stateName" ColumnName="stateName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -7,8 +7,8 @@
       <Diagram DiagramId="d465fb818d6e4ad2a5e1447d64b5c273" Name="Diagram1" ZoomLevel="55">
         <EntityTypeShape EntityType="ProductDBModel.tblProduct" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" FillColor="0, 122, 204" />
         <EntityTypeShape EntityType="ProductDBModel.State" Width="1.5" PointX="3.375" PointY="0.75" />
-        <EntityTypeShape EntityType="ProductDBModel.ewayBill" Width="1.5" PointX="0.75" PointY="3.75" />
         <EntityTypeShape EntityType="ProductDBModel.User" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="ProductDBModel.ewayBill" Width="1.5" PointX="5.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

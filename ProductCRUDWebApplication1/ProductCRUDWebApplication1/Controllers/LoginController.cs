@@ -32,7 +32,6 @@ namespace ProductCRUDWebApplication1.Controllers
                 if (isValidUser)
                 {
                     FormsAuthentication.SetAuthCookie(user.UserName, false);
-                    // Session["Username"] = user.UserName;
                     return RedirectToAction("Index", "Home");
                 }
                 else
@@ -42,12 +41,6 @@ namespace ProductCRUDWebApplication1.Controllers
                     return View();
                 }
             }
-        }
-        public ActionResult Logout()
-        {
-            FormsAuthentication.SignOut();
-            Session.Clear();
-            return RedirectToAction("Index", "Login");
         }
     }
 }

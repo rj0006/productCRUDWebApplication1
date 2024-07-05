@@ -2,17 +2,13 @@
 <Schema Namespace="ProductDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="ewayBill">
     <Key>
-      <PropertyRef Name="GSTIN" />
+      <PropertyRef Name="ID" />
     </Key>
-    <Property Name="GSTIN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="State" Type="nchar" MaxLength="50" Nullable="false" />
-    <Property Name="EWBUserName" Type="nchar" MaxLength="100" />
-    <Property Name="EWBPassword" Type="nchar" MaxLength="50" />
-    <Property Name="Year" Type="int" />
-    <Property Name="Month" Type="int" />
-    <Property Name="EFUserName" Type="nchar" MaxLength="255" />
-    <Property Name="EFPassword" Type="nchar" MaxLength="255" />
-    <Property Name="CDKey" Type="nchar" MaxLength="20" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="stateName" Type="nvarchar" MaxLength="255" />
+    <Property Name="GSTIN" Type="nvarchar" MaxLength="15" />
+    <Property Name="EWBUserName" Type="nvarchar" MaxLength="255" />
+    <Property Name="EWBPassword" Type="nvarchar" MaxLength="255" />
   </EntityType>
   <EntityType Name="State">
     <Key>

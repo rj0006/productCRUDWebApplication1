@@ -1,6 +1,6 @@
-﻿@model ProductCRUDWebApplication1.Models.State
+﻿@model ProductCRUDWebApplication1.Models.ewayBill
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Create State";
 }
 
 <h2>Add New State</h2>
@@ -11,16 +11,20 @@
 {
     <table class="table">
         <tr>
-            <td>Enter state name : </td>
-            <td>@Html.EditorFor(Model => Model.state_name, new { htmlAttributes = new { @class = "form-control" } })</td>
+            <td>State Name </td>
+            <td>@Html.EditorFor(Model => Model.stateName, new { htmlAttributes = new { @class = "form-control" } })</td>
         </tr>
         <tr>
-            <td>State Code : </td>
-            <td>@Html.EditorFor(Model => Model.state_code, new { htmlAttributes = new { @class = "form-control" } })</td>
+            <td>GSTIN </td>
+            <td>@Html.EditorFor(Model => Model.GSTIN, new { htmlAttributes = new { @class = "form-control" } })</td>
         </tr>
         <tr>
-            <td>Enter Country : </td>
-            <td>@Html.EditorFor(Model => Model.state_country, new { htmlAttributes = new { @class = "form-control" } })</td>
+            <td>EWBUsername </td>
+            <td>@Html.EditorFor(Model => Model.EWBUserName, new { htmlAttributes = new { @class = "form-control" } })</td>
+        </tr>
+        <tr>
+            <td>EWBPassword </td>
+            <td>@Html.EditorFor(Model => Model.EWBPassword, new { htmlAttributes = new { @class = "form-control" } })</td>
         </tr>
         <tr>
             <td>

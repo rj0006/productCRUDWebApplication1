@@ -63,3 +63,6 @@ C:\Users\lenovo\source\repos\ProductCRUDWebApplication1\ProductCRUDWebApplicatio
 C:\Users\lenovo\source\repos\ProductCRUDWebApplication1\ProductCRUDWebApplication1\bin\roslyn\System.Memory.dll
 C:\Users\lenovo\source\repos\ProductCRUDWebApplication1\ProductCRUDWebApplication1\bin\roslyn\System.Numerics.Vectors.dll
 C:\Users\lenovo\source\repos\ProductCRUDWebApplication1\ProductCRUDWebApplication1\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\lenovo\source\repos\ProductCRUDWebApplication1\ProductCRUDWebApplication1\bin\Dapper.dll
+C:\Users\lenovo\source\repos\ProductCRUDWebApplication1\ProductCRUDWebApplication1\bin\Dapper.xml
+C:\Users\lenovo\source\repos\ProductCRUDWebApplication1\ProductCRUDWebApplication1\bin\Microsoft.WebSockets.dll

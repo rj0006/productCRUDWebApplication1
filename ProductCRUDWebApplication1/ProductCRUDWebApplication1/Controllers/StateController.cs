@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -11,33 +12,19 @@ namespace ProductCRUDWebApplication1.Controllers
 {
     public class StateController : Controller
     {
-        /*
-        private readonly MLPLEntities context;
-        public StateController(MLPLEntities context)
-        {
-            this.context = context;
-        }
-        public async Task<ActionResult> GetData()
-        {
-            var data = await context.CL_Master_User.ToListAsync();
-            return Json(data, JsonRequestBehavior.AllowGet);
-
-        }
-        */
-
         // GET: State
         public ActionResult Index()
         {
             using (ProductDBEntities1 dbEntities1 = new ProductDBEntities1())
             {
-                List<State> StatesList = (from data in dbEntities1.States select data).ToList();
+                List<ewayBill> StatesList = (from data in dbEntities1.ewayBills select data).ToList();
 
                 return View(StatesList);
             }
         }
 
         // GET: State/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(int ID)
         {
             return View();
         }
@@ -45,19 +32,19 @@ namespace ProductCRUDWebApplication1.Controllers
         // GET: State/Create
         public ActionResult Create()
         {
-            return View(new State());
+            return View(new ewayBill());
         }
 
         // POST: State/Create
         [HttpPost]
-        public ActionResult Create(State state)
+        public ActionResult Create(ewayBill ID)
         {
             try
             {
                 // TODO: Add insert logic here
                 using (ProductDBEntities1 db =  new ProductDBEntities1())
                 {
-                    db.States.Add(state);
+                    db.ewayBills.Add(ID);
                     db.SaveChanges();
                 }
                 return RedirectToAction("Index");
@@ -68,20 +55,32 @@ namespace ProductCRUDWebApplication1.Controllers
             }
         }
 
-        // GET: State/Edit/5
+
         public ActionResult Edit(int id)
         {
-            return View();
+            using (ProductDBEntities1 db = new ProductDBEntities1())
+            {
+                ewayBill products = db.ewayBills.Find(id);
+                return View(products);
+            }
         }
 
-        // POST: State/Edit/5
+        // POST: Product/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(ewayBill state)
         {
             try
             {
-                // TODO: Add update logic here
-
+                using (ProductDBEntities1 db = new ProductDBEntities1())
+                {
+                    ewayBill tbl = db.ewayBills.Find(state.ID);
+                    tbl.GSTIN = state.GSTIN;
+                    tbl.stateName = state.stateName;
+                    tbl.EWBUserName = state.EWBUserName;
+                    tbl.EWBPassword = state.EWBPassword;
+                    
+                    db.SaveChanges();
+                }
                 return RedirectToAction("Index");
             }
             catch

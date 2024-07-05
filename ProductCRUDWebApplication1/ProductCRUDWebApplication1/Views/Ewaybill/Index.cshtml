@@ -3,73 +3,257 @@
     ViewBag.Title = "Index";
 }
 
-<h1>API Response Details</h1>
-
-<div id="result"></div>
-
-<table id="responseTable">
-    <tr>
-        <th>Value</th>
-        <th>h</th>
-    </tr>
-</table>
-
-
-<script>
-    async function fetchData(inputInteger) {
-        const url = 'http://ewayasp.webtel.in/EWayBill/v1.3/GetEWB/';
-
-        const requestData = {
-            GSTIN: '06AADCM8862E1ZD',
-            ewbNo: inputInteger,
-            EWBUserName: 'mahalakshm_API_pkg',
-            EWBPassword: 'Admin@5303',
-            Year: 2024,
-            Month: 1,
-            EFUserName: '039C10BA-5F49-4C9C-98B7-2B14AAFA38E8',
-            EFPassword: '1D4331EF-1DFB-43D3-A065-4F24DBBEB1CD',
-            CDKey: '1550859'
-        };
-
-        try {
-            const response = await fetch(url, {
-                method: 'POST',
-                body: JSON.stringify(requestData),
-                // authorization
-                headers: {
-                    'Content-type': 'application/json; charset=UTF-8',
-                    Authorization: '/IalkRmh3z4=:::ZH4TUvIeJ3A=' 
-                }
-            });
-
-            if (response.ok) {
-                const jsonString = await response.json();
-                const data = JSON.parse(jsonString)
-
-                console.log("Parse : ", data)
-
-                displayResponse(data);
-            } else {
-                console.error('Error:', response.statusText);
-            }
-        } catch (error) {
-            console.error('Error:', error);
+<div>
+    <label class="form-label">State</label>
+    <select class="form-select" id="stateDropdown">
+        <option value="">Select</option>
+        @foreach (var state in Model)
+        {
+            <option value="@state.StateId">@state.StateName</option>
         }
-    }
+    </select>
 
-    function displayResponse(data) {
-        const tableBody = document.getElementById('responseTable');
-        for (const field in data) {
-            const row = document.createElement('tr');
-            const cell1 = document.createElement('td');
-            const cell2 = document.createElement('td');
-            cell1.textContent = field;
-            cell2.textContent = data[field];
-            row.appendChild(cell1);
-            row.appendChild(cell2);
-            tableBody.appendChild(row);
-        }
-    }
+    <div class="form-group">
+        <label for="exampleInputEmail1">Ewaybill No</label>
+        <input type="text" class="form-control" id="ewbNo" placeholder="Ewaybill">
+    </div>
 
-    fetchData(761350224916);
+    <button type="button" class="mt-3 btn btn-sm btn-primary" id="btnSendRequest">Get Detail</button>
+</div>
+<div class="mt-3" id="responseValue"></div>
+
+<div id="ewbExtensionDiv"></div> <!-- "Do you wish to get Extension for this EWB?" -->
+<!-- Visible button
+<button id="visibleButton">Visible Button</button>
+ Hidden button initially
+<div id="message"></div>
+<button class="btn btn-sm btn-primary" id="hiddenButton" style="display: none;">Extend</button>
+$("#visibleButton").hide(); -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-range/4.0.3/moment-range.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#btnSendRequest").click(function () {
+            var stateDropdown = $("#stateDropdown").val();
+            console.log(stateDropdown);
+            var ewbNo = $('#ewbNo').val();
+            console.log(ewbNo);
+            if (stateDropdown && ewbNo) {
+                var url = '@Url.Action("GetData", "Ewaybill")'; // Corrected controller name
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data: JSON.stringify({ model: { StateId: stateDropdown, ewbNo:ewbNo } }), // Adjusted data structure
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (response) {
+                        var responseObject = JSON.parse(response);
+                        console.log('responseObject : ', responseObject);
+                        if (responseObject[0].ErrorMessage == null) {
+                            EWBDetails = JSON.parse(responseObject[0].EWBDetails)
+                            console.log('EWBDetails : ', EWBDetails);
+
+                            var VehiclListDetails = EWBDetails.VehiclListDetails;
+                            var vehicleListLength = EWBDetails.VehiclListDetails.length
+                            var lastVehicleNumber = EWBDetails.VehiclListDetails[vehicleListLength - 1].vehicleNo;
+                            console.log('vehicleListLength : ', vehicleListLength, ' lastVehicleNumber : ', lastVehicleNumber);
+
+                            var actFromStateCode = EWBDetails.actFromStateCode;
+                            var actToStateCode = EWBDetails.actToStateCode;
+                            var actualDist = EWBDetails.actualDist;
+                            var cessNonAdvolValue = EWBDetails.cessNonAdvolValue;
+                            var cessValue = EWBDetails.cessValue;
+                            var cgstValue = EWBDetails.cgstValue;
+                            var docDate = moment(EWBDetails.docDate, 'DD/MM/YYYY');
+                            var docNo = EWBDetails.docNo;
+                            var docType = EWBDetails.docType;
+                            var errorCodes = EWBDetails.errorCodes;
+                            var errorDesc = EWBDetails.errorDesc;
+                            var ewayBillDate = moment(EWBDetails.ewayBillDate, "DD/MM/YYYY hh:mm:ss A");
+                            var ewbNo = EWBDetails.ewbNo;
+                            var extendedTimes = EWBDetails.extendedTimes;
+                            var fromAddr1 = EWBDetails.fromAddr1;
+                            var fromAddr2 = EWBDetails.fromAddr2;
+                            var fromGstin = EWBDetails.fromGstin;
+                            var fromPincode = EWBDetails.fromPincode;
+                            var fromPlace = EWBDetails.fromPlace;
+                            var fromStateCode = EWBDetails.fromStateCode;
+                            var fromTrdName = EWBDetails.fromTrdName;
+                            var genMode = EWBDetails.genMode;
+                            var igstValue = EWBDetails.igstValue;
+                            var itemList = EWBDetails.itemList[0];
+                            var noValidDays = EWBDetails.noValidDays;
+                            var otherValue = EWBDetails.otherValue;
+                            var rejectStatus = EWBDetails.rejectStatus;
+                            var resstatus = EWBDetails.resstatus;
+                            var sgstValue = EWBDetails.sgstValue;
+                            var status = EWBDetails.status;
+                            var subSupplyType = EWBDetails.subSupplyType;
+                            var supplyType = EWBDetails.supplyType;
+                            var toAddr1 = EWBDetails.toAddr1;
+                            var toAddr2 = EWBDetails.toAddr2;
+                            var toGstin = EWBDetails.toGstin;
+                            var toPincode = EWBDetails.toPincode;
+                            var toPlace = EWBDetails.toPlace;
+                            var toStateCode = EWBDetails.toStateCode;
+                            var toTrdName = EWBDetails.toTrdName;
+                            var totInvValue = EWBDetails.totInvValue;
+                            var totalValue = EWBDetails.totalValue;
+                            var transDocDate = EWBDetails.transDocDate;
+                            var transDocNo = EWBDetails.transDocNo;
+                            var transMode = EWBDetails.transMode;
+                            var transactionType = EWBDetails.transactionType;
+                            var transporterId = EWBDetails.transporterId;
+                            var transporterName = EWBDetails.transporterName;
+                            var userGstin = EWBDetails.userGstin;
+                            var validUpto = moment(EWBDetails.validUpto, "DD/MM/YYYY hh:mm:ss A");
+                            var vehicleType = EWBDetails.vehicleType;
+
+                            let responseValue = document.getElementById('responseValue');
+
+                            // Set innerHTML directly
+                            responseValue.innerHTML = `
+                                <div>${ewbNo}</div>
+                                <div>Eway bill Valid upto: ${validUpto}</div>
+                            `;
+
+                            var ewbExtensionDiv = document.getElementById("ewbExtensionDiv");
+                            ewbExtensionDiv.innerHTML = "";
+
+                            var ewaybillBeforeEightHour = validUpto.clone().subtract(8, 'hours');
+                            console.log('ewaybillBeforeEightHour : ', ewaybillBeforeEightHour.format("DD/MM/YYYY hh:mm:ss A"));
+                            var currentDate = moment();
+                            //if (currentDate.isBetween(ewaybillBeforeEightHour, validUpto)) {
+                                if (ewayBillDate.isValid())
+                                {
+                                    ewbExtensionDiv.innerHTML +=`
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                            <label class="form-check-label" for="flexCheckChecked">
+                                                Do you wish to get Extension for this EWB?
+                                            </label>
+                                        </div>
+                                        <div id="ewaybillExtensionContent"></div>
+                                    `;
+
+                                    let checkbox = document.getElementById('flexCheckChecked');
+                                    // Add an event listener to check when the checkbox state changes
+                                    checkbox.addEventListener('change', function () {
+                                        var ewaybillExtensionContent = document.getElementById("ewaybillExtensionContent");
+                                        // Clear existing content
+                                        ewaybillExtensionContent.innerHTML = "";
+                                        // Check if the checkbox is checked
+                                        if (this.checked) {
+                                            ewaybillExtensionContent.innerHTML += `
+                                            <div class="form-group">
+                                                <label for="exampleInput">Current Place</label>
+                                                <input type="text" class="form-control" id="currentPlace" placeholder="Place">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInput">Current Pincode</label>
+                                                <input type="text" class="form-control" id="currentPincode" placeholder="Pincode">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInput">Current State</label>
+                                                <input type="text" class="form-control" id="currentState" placeholder="State">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInput">Auto Calculated PIN to PIN (in KM)</label>
+                                                <input type="text" class="form-control" id="totalKm" placeholder="Kilometer">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInput">Mode</label>
+                                                <input type="text" class="form-control" id="mode" placeholder="Mode">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInput">Vehicle No</label>
+                                                <input type="text" class="form-control" id="vehicleNo" value="${lastVehicleNumber}" placeholder="Vehicle No">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInput">Transporter Doc No</label>
+                                                <input type="text" class="form-control" id="transporterDoc" placeholder="Document No">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInput">Date</label>
+                                                <input type="date" class="form-control" id="transporterDate" placeholder="Date">
+                                            </div>
+                                            <button type="button" class="mt-3 btn btn-sm btn-primary" id="ewbExtendValidityBtn">Submit</button>
+
+                                            `;
+
+                                            $(document).ready(function () {
+                                                $("#ewbExtendValidityBtn").click(function () {
+                                                    var currentPlace = $("#currentPlace").val();
+                                                    var currentPincode = $("#currentPincode").val();
+                                                    var currentState = $("#currentState").val();
+                                                    var totalKm = $("#totalKm").val();
+                                                    var mode = $("#mode").val();
+                                                    var vehicleNo = $("#vehicleNo").val();
+                                                    var transporterDoc = $("#transporterDoc").val();
+                                                    var transporterDate = $("#transporterDate").val();
+                                                    console.log(currentPlace);
+                                                    console.log(ewbNo);
+                                                    var url = '@Url.Action("ExtendEwbValidity", "Ewaybill")'; // Corrected controller name
+                                                    $.ajax({
+                                                        type: "POST",
+                                                        url: url,
+                                                        data: JSON.stringify({
+                                                            validityModel: {
+                                                                StateId: stateDropdown,
+                                                                ewbNo: ewbNo,
+                                                                currentPlace: currentPlace,
+                                                                currentPincode: currentPincode,
+                                                                currentState: currentState,
+                                                                totalKm: totalKm,
+                                                                mode: mode,
+                                                                vehicleNo: vehicleNo,
+                                                                transporterDoc: transporterDoc,
+                                                                transporterDate: transporterDate
+                                                            }
+                                                        }), // Adjusted data structure
+                                                        contentType: "application/json; charset=utf-8",
+                                                        dataType: "json",
+                                                        success: function (response) {
+                                                            var responseObject = JSON.parse(response);
+                                                            console.log('responseObject : ', responseObject);
+                                                            // write to code after perform operation
+                                                        },
+                                                        error: function (xhr, status, error) {
+                                                            console.log(xhr.responseText);
+                                                        }
+                                                    });
+                                                });
+                                            });
+
+                                        } else {
+                                            ewaybillExtensionContent.innerHTML += "";
+                                        }
+                                    });
+                                }
+                                else
+                                {
+                                    console.warn("Invalid date format. Moment.js could not parse the date correctly.");
+                                }
+                            //}
+
+                        }
+                        else
+                        {
+                            var errorMessage = responseObject[0].ErrorMessage;
+                            alert(errorMessage);
+                            console.log("Error Message:", errorMessage);
+                            $('#responseValue').text(errorMessage);
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.log(xhr.responseText);
+                    }
+                });
+            } else { alert('Ewaybill No and State are both mandatory'); }
+        });
+    });
+
 </script>

@@ -1,89 +1,132 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+﻿@{
+    var controllerName = ViewContext.RouteData.Values["Controller"]?.ToString();
+    var actionName = ViewContext.RouteData.Values["Action"]?.ToString();
+}
+@if (!(string.Equals(controllerName, "Login", StringComparison.OrdinalIgnoreCase) && string.Equals(actionName, "Index", StringComparison.OrdinalIgnoreCase)))
+{
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewBag.Title - My ASP.NET Application</title>
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.4/leaflet.awesome-markers.css" />
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.4/leaflet.awesome-markers.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.4/leaflet.awesome-markers.css" />
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.4/leaflet.awesome-markers.min.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+        @* For dropdown button *@
+        <!-- Bootstrap CSS -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap JS (optional, for dropdown functionality) -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
 
 
-    @**DataTables CSS *@
-    <link rel="stylesheet" href="//cdn.datatables.net/2.0.7/css/dataTables.dataTables.min.css" />
+        @**DataTables CSS *@
+        <link rel="stylesheet" href="//cdn.datatables.net/2.0.7/css/dataTables.dataTables.min.css" />
 
+        <style>
+            #mapid {
+                height: 600px;
+            }
 
-    <style>
-        #mapid {
-            height: 600px;
-        }
-
-        .form-control {
-            box-shadow: none !important;
-        }
-    </style>
-</head>
-<body>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
-        <div class="container">
-            @Html.ActionLink("MLPL", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
-
-                <ul class="navbar-nav flex-grow-1">
-
+            .form-control {
+                box-shadow: none !important;
+            }
+        </style>
+    </head>
+    <body>
+        @*@{
+                var controllerName = ViewContext.RouteData.Values["Controller"]?.ToString();
+                var actionName = ViewContext.RouteData.Values["Action"]?.ToString();
+            }
+            @if (!(string.Equals(controllerName, "Login", StringComparison.OrdinalIgnoreCase) && string.Equals(actionName, "Index", StringComparison.OrdinalIgnoreCase)))
+            {*@
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+            <div class="container">
+                @Html.ActionLink("MLPL", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
 
                     @if (User.Identity.IsAuthenticated)
                     {
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                @Html.ActionLink("Eway Bill", "Index", "Ewaybill", new { area = "" }, new { @class = "nav-link" })
+                            </li>
+                            <li class="nav-item">
+                                @Html.ActionLink("State", "Index", "State", new { area = "" }, new { @class = "nav-link" })
+                            </li>
+                            <li class="nav-item">
+                                @Html.ActionLink("Vehicle Tracking", "Index", "VehicleTrackingService", new { area = "" }, new { @class = "nav-link" })
+                            </li>
+                        </ul>
+
+                        <nav class="nav text-end">
+                            <div class="dropdown">
+                                <a class="nav-link dropdown-toggle" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+                                    @User.Identity.Name
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="userDropdown">
+                                    @Html.ActionLink("Logout", "Logout", "Home", new { area = "" }, new { @class = "dropdown-item" })
+                                </div>
                             </div>
-                        </li>
-                        <li>@Html.ActionLink("Logout", "Logout", "Login", new { area = "" }, new { @class = "nav-link" })</li>
+                        </nav>
                     }
                     else
                     {
-                        // <li>@Html.ActionLink("Login", "Index", "Login", new { area = "" }, new { @class = "nav-link" })</li>
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item nav-link">About Us</li>
+                            <li class="nav-item nav-link">Clients</li>
+                            <li class="nav-item nav-link">Find a Location</li>
+                            <li class="nav-item nav-link">Track your shipment</li>
+                            <li class="nav-item nav-link">Contact Us</li>
+                        </ul>
+                        <nav class="nav text-end">
+                            @Html.ActionLink("Login", "Index", "Login", new { area = "" }, new { @class = "nav-link", style = "color: white; text-decoration: none;" })
+                        </nav>
+
                     }
-                </ul>
-                @if (User.Identity.IsAuthenticated)
-                {
-                    <nav class="nav nav-tabs text-end float-end text-light">@User.Identity.Name</nav>
-                    <nav class="nav nav-tabs text-end float-end text-light">@ViewBag.name</nav>
-                }
+
+
+                    @*<nav class="nav nav-tabs text-end">@Html.ActionLink("Logout", "Logout", "Home", new { area = "" }, new { @class = "nav-link" })</nav>
+        <nav class="nav nav-tabs text-end float-end text-light">@User.Identity.Name</nav>*@
+
+                </div>
             </div>
+        </nav>
+
+
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>
         </div>
-    </nav>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
 
-    @* @Scripts.Render("~/bundles/jquery") *@
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+        @* @Scripts.Render("~/bundles/jquery") *@
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
 
-    @*DataTables JS*@
-    <script src="//cdn.datatables.net/2.0.7/js/dataTables.min.js"></script>
-</body>
+        @*DataTables JS*@
+        <script src="//cdn.datatables.net/2.0.7/js/dataTables.min.js"></script>
+    </body>
 </html>
+}
+else
+            {
+        <div class="">
+            @RenderBody()
+        </div>
+
+            }

@@ -14,14 +14,10 @@ namespace ProductCRUDWebApplication1.Models
     
     public partial class ewayBill
     {
-        public int GSTIN { get; set; }
-        public string State { get; set; }
+        public int ID { get; set; }
+        public string stateName { get; set; }
+        public string GSTIN { get; set; }
         public string EWBUserName { get; set; }
         public string EWBPassword { get; set; }
-        public Nullable<int> Year { get; set; }
-        public Nullable<int> Month { get; set; }
-        public string EFUserName { get; set; }
-        public string EFPassword { get; set; }
-        public string CDKey { get; set; }
     }
 }

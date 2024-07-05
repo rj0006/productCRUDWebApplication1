@@ -7,17 +7,13 @@
     <Schema Namespace="ProductDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="ewayBill">
           <Key>
-            <PropertyRef Name="GSTIN" />
+            <PropertyRef Name="ID" />
           </Key>
-          <Property Name="GSTIN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="State" Type="nchar" MaxLength="50" Nullable="false" />
-          <Property Name="EWBUserName" Type="nchar" MaxLength="100" />
-          <Property Name="EWBPassword" Type="nchar" MaxLength="50" />
-          <Property Name="Year" Type="int" />
-          <Property Name="Month" Type="int" />
-          <Property Name="EFUserName" Type="nchar" MaxLength="255" />
-          <Property Name="EFPassword" Type="nchar" MaxLength="255" />
-          <Property Name="CDKey" Type="nchar" MaxLength="20" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="stateName" Type="nvarchar" MaxLength="255" />
+          <Property Name="GSTIN" Type="nvarchar" MaxLength="15" />
+          <Property Name="EWBUserName" Type="nvarchar" MaxLength="255" />
+          <Property Name="EWBPassword" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="State">
           <Key>
@@ -69,8 +65,8 @@
         <EntityContainer Name="ProductDBEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tblProducts" EntityType="Self.tblProduct" />
           <EntitySet Name="States" EntityType="ProductDBModel.State" />
-          <EntitySet Name="ewayBills" EntityType="ProductDBModel.ewayBill" />
           <EntitySet Name="Users" EntityType="ProductDBModel.User" />
+          <EntitySet Name="ewayBills" EntityType="ProductDBModel.ewayBill" />
         </EntityContainer>
         <EntityType Name="State">
           <Key>
@@ -81,20 +77,6 @@
           <Property Name="state_code" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="state_country" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
         </EntityType>
-        <EntityType Name="ewayBill">
-          <Key>
-            <PropertyRef Name="GSTIN" />
-          </Key>
-          <Property Name="GSTIN" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="State" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
-          <Property Name="EWBUserName" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
-          <Property Name="EWBPassword" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
-          <Property Name="Year" Type="Int32" />
-          <Property Name="Month" Type="Int32" />
-          <Property Name="EFUserName" Type="String" MaxLength="255" FixedLength="true" Unicode="true" />
-          <Property Name="EFPassword" Type="String" MaxLength="255" FixedLength="true" Unicode="true" />
-          <Property Name="CDKey" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
-        </EntityType>
         <EntityType Name="User">
           <Key>
             <PropertyRef Name="Id" />
@@ -102,6 +84,16 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ewayBill">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="stateName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="GSTIN" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="EWBUserName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="EWBPassword" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -130,27 +122,23 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="ewayBills">
-            <EntityTypeMapping TypeName="ProductDBModel.ewayBill">
-              <MappingFragment StoreEntitySet="ewayBill">
-                <ScalarProperty Name="CDKey" ColumnName="CDKey" />
-                <ScalarProperty Name="EFPassword" ColumnName="EFPassword" />
-                <ScalarProperty Name="EFUserName" ColumnName="EFUserName" />
-                <ScalarProperty Name="Month" ColumnName="Month" />
-                <ScalarProperty Name="Year" ColumnName="Year" />
-                <ScalarProperty Name="EWBPassword" ColumnName="EWBPassword" />
-                <ScalarProperty Name="EWBUserName" ColumnName="EWBUserName" />
-                <ScalarProperty Name="State" ColumnName="State" />
-                <ScalarProperty Name="GSTIN" ColumnName="GSTIN" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="ProductDBModel.User">
               <MappingFragment StoreEntitySet="User">
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ewayBills">
+            <EntityTypeMapping TypeName="ProductDBModel.ewayBill">
+              <MappingFragment StoreEntitySet="ewayBill">
+                <ScalarProperty Name="EWBPassword" ColumnName="EWBPassword" />
+                <ScalarProperty Name="EWBUserName" ColumnName="EWBUserName" />
+                <ScalarProperty Name="GSTIN" ColumnName="GSTIN" />
+                <ScalarProperty Name="stateName" ColumnName="stateName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
